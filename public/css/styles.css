@@ -83,15 +83,16 @@ section {
 .hero-section {
     height: 100vh;
     min-height: 600px;
-    background-image: url('blkgym.webp');
+    background-image: url('./fitti.webp');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: scroll;
     position: relative;
     color: white;
     display: flex;
     align-items: center;
-    -webkit-backface-visibility: hidden; /* Prevent flickering on iOS */
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
