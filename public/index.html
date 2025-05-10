@@ -6,6 +6,7 @@
     <title>Click Fit - Your Fitness Journey Starts Here</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,19 +22,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Workouts</a>
+                        <a class="nav-link" href="404.html">Workouts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nutrition</a>
+                        <a class="nav-link" href="404.html">Nutrition</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Community</a>
+                        <a class="nav-link" href="404.html">Community</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="404.html">About</a>
                     </li>
                 </ul>
             </div>
@@ -60,8 +61,12 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
                     <h2 class="section-heading">Today's Fitness Fact</h2>
-                    <div class="fact-box p-4 my-4">
-                        <div id="numberFact" class="lead">Loading interesting fact...</div>
+                    <div class="fact-box p-4 my-4 animate__animated animate__fadeIn">
+                        <div id="numberFact" class="lead">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,9 +113,9 @@
                     <h2 class="section-heading mb-4">Share Your Fitness Journey</h2>
                     <p class="lead">Upload your workout photos to inspire others</p>
                     
-                    <div id="upload-area" class="upload-area mt-4">
+                    <div id="upload-area" class="upload-area mt-4 animate__animated animate__fadeIn">
                         <div class="upload-container">
-                            <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                            <i class="fas fa-cloud-upload-alt fa-3x mb-3 text-primary"></i>
                             <p>Drag & drop images here or click to upload</p>
                             <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
                         </div>
@@ -120,13 +125,13 @@
                     
                     <div class="upload-status mt-3">
                         <div id="upload-progress" class="progress" style="display: none;">
-                            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
                         </div>
-                        <p id="upload-message"></p>
+                        <p id="upload-message" class="mt-2"></p>
                     </div>
                     
-                    <button id="uploadButton" class="btn btn-primary mt-3" style="display: none;">
-                        Upload Selected Images
+                    <button id="uploadButton" class="btn btn-primary mt-3 animate__animated animate__fadeIn" style="display: none;">
+                        <i class="fas fa-upload me-2"></i>Upload Selected Images
                     </button>
                 </div>
             </div>
@@ -143,37 +148,37 @@
             </div>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card animate__animated animate__fadeInUp">
                         <div class="testimonial-image">
-                            <img src="https://via.placeholder.com/150" alt="Testimonial" class="rounded-circle">
+                            <img src="css/esther.webp" alt="Esther's testimonial" class="rounded-circle">
                         </div>
                         <div class="testimonial-content">
                             <p>"ClickFit transformed my approach to fitness. I've lost 30 pounds and gained so much confidence!"</p>
-                            <h5>Sarah J.</h5>
+                            <h5>Estherose</h5>
                             <small>Member since 2023</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
                         <div class="testimonial-image">
-                            <img src="https://via.placeholder.com/150" alt="Testimonial" class="rounded-circle">
+                            <img src="css/shacks.webp" alt="Shacks's testimonial" class="rounded-circle">
                         </div>
                         <div class="testimonial-content">
                             <p>"The nutrition plans and workout combinations are perfect. I've never felt healthier in my life!"</p>
-                            <h5>Michael T.</h5>
+                            <h5>Shacks</h5>
                             <small>Member since 2022</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
                         <div class="testimonial-image">
-                            <img src="https://via.placeholder.com/150" alt="Testimonial" class="rounded-circle">
+                            <img src="css/donnie.webp" alt="Donald's testimonial" class="rounded-circle">
                         </div>
                         <div class="testimonial-content">
                             <p>"As a busy professional, I love how I can fit these workouts into my schedule. The results speak for themselves!"</p>
-                            <h5>Jessica L.</h5>
+                            <h5>Donald</h5>
                             <small>Member since 2023</small>
                         </div>
                     </div>
@@ -217,18 +222,18 @@
                 <div class="col-lg-3 mb-4 mb-lg-0">
                     <h5 class="text-white">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-muted">Home</a></li>
-                        <li><a href="#" class="text-muted">Workouts</a></li>
-                        <li><a href="#" class="text-muted">Nutrition</a></li>
-                        <li><a href="#" class="text-muted">Community</a></li>
+                        <li><a href="index.html" class="text-muted">Home</a></li>
+                        <li><a href="404.html" class="text-muted">Workouts</a></li>
+                        <li><a href="404.html" class="text-muted">Nutrition</a></li>
+                        <li><a href="404.html" class="text-muted">Community</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4 mb-lg-0">
                     <h5 class="text-white">Contact</h5>
                     <ul class="list-unstyled text-muted">
                         <li>Email: info@clickfit.com</li>
-                        <li>Phone: (123) 456-7890</li>
-                        <li>Address: 123 Fitness St, Health City</li>
+                        <li>Phone: (0743) 773-656</li>
+                        <li>Address: Arusha, Arusha Region</li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -252,6 +257,7 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

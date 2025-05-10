@@ -47,15 +47,28 @@ const upload = multer({
 
 // MySQL Connection
 const dbConfig = {
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'clickfit_db'
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || 'kilimanjaro02',  // Updated password
+    database: process.env.DB_NAME || 'clickfit_db',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 };
 
-// Create connection pool
+// Create connection pool with error handling
 const pool = mysql.createPool(dbConfig);
 const promisePool = pool.promise();
+
+// Test database connection
+pool.getConnection((err, connection) => {
+    if (err) {
+        console.error('Error connecting to the database:', err);
+        return;
+    }
+    console.log('Successfully connected to database');
+    connection.release();
+});
 
 // API Endpoints
 // Handle image uploads
